@@ -117,7 +117,7 @@
                       加上@change當input值更新時,就執行all.js的 updateCart函式,並帶回item參數
                       加入:disabled當all.js data的loadingStatus.loadingItem值 === item.id 判斷true or false 來判斷是否啟動disabled 無法點擊效果
                       -->
-                      <input min="1" type="number" v-model.number="item.qty" @change="updateCart(item)"
+                      <input min="1" max="99" type="number" v-model.number="item.qty" @change="updateCart(item)"
                         :disabled="loadingStatus.loadingItem === item.id" class="form-control">
                       <span class="input-group-text" id="basic-addon2"></span>
                     </div>
