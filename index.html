@@ -166,7 +166,7 @@
           <div class="mb-3">
             <label for="tel">電話</label>
             <v-field id="tel" name="電話" type="tel" class="form-control" :class="{ 'is-invalid': errors['電話'] }"
-              placeholder="請輸入電話" rules="required|numeric" v-model="form.user.tel"></v-field>
+              placeholder="請輸入電話" rules="required|min:8|numeric" v-model="form.user.tel"></v-field>
             <error-message name="電話" class="invalid-feedback"></error-message>
           </div>
           <!-- address -->
@@ -175,6 +175,11 @@
             <v-field id="address" name="地址" type="address" class="form-control" :class="{ 'is-invalid': errors['地址'] }"
               placeholder="請輸入地址" rules="required" v-model="form.user.address"></v-field>
             <error-message name="地址" class="invalid-feedback"></error-message>
+          </div>
+          <!-- 備註 -->
+          <div class="mb-3">
+            <label for="address">備註</label><br>
+            <textarea style="resize:none;width:100%;height:150px;"></textarea>
           </div>
 
           <div class="text-end">
